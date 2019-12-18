@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ModeGrayscale</class>
+ <widget class="QDialog" name="ModeGrayscale">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>274</width>
+    <height>172</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>172</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>宋体</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Mode to grayscale</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="title">
+        <string>Algorithm</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>5</number>
+        </property>
+        <property name="leftMargin">
+         <number>5</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>5</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QRadioButton" name="radioMean">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>&amp;Mean</string>
+          </property>
+          <attribute name="buttonGroup">
+           <string notr="true">btngrp</string>
+          </attribute>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioMax">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>M&amp;ax</string>
+          </property>
+          <attribute name="buttonGroup">
+           <string notr="true">btngrp</string>
+          </attribute>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioMin">
+          <property name="text">
+           <string>Mi&amp;n</string>
+          </property>
+          <attribute name="buttonGroup">
+           <string notr="true">btngrp</string>
+          </attribute>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioWeighed">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>W&amp;eighed</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <attribute name="buttonGroup">
+           <string notr="true">btngrp</string>
+          </attribute>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Weighs</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>&amp;B</string>
+           </property>
+           <property name="buddy">
+            <cstring>spbxB</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QSpinBox" name="spbxR">
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>30</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>&amp;G</string>
+           </property>
+           <property name="buddy">
+            <cstring>spbxG</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QSpinBox" name="spbxB">
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>11</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QSpinBox" name="spbxG">
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>59</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QSlider" name="sldrB">
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="pageStep">
+            <number>5</number>
+           </property>
+           <property name="value">
+            <number>11</number>
+           </property>
+           <property name="tracking">
+            <bool>true</bool>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::NoTicks</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSlider" name="sldrG">
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="pageStep">
+            <number>5</number>
+           </property>
+           <property name="value">
+            <number>59</number>
+           </property>
+           <property name="tracking">
+            <bool>true</bool>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::NoTicks</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>&amp;R</string>
+           </property>
+           <property name="buddy">
+            <cstring>spbxR</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QSlider" name="sldrR">
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="pageStep">
+            <number>5</number>
+           </property>
+           <property name="value">
+            <number>30</number>
+           </property>
+           <property name="tracking">
+            <bool>true</bool>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::NoTicks</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <property name="spacing">
+      <number>5</number>
+     </property>
+     <item>
+      <widget class="QCheckBox" name="checkBox">
+       <property name="text">
+        <string>&amp;Preview</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+       <property name="centerButtons">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>spbxR</tabstop>
+  <tabstop>spbxG</tabstop>
+  <tabstop>spbxB</tabstop>
+  <tabstop>radioMean</tabstop>
+  <tabstop>radioMax</tabstop>
+  <tabstop>radioMin</tabstop>
+  <tabstop>radioWeighed</tabstop>
+  <tabstop>checkBox</tabstop>
+  <tabstop>sldrR</tabstop>
+  <tabstop>sldrG</tabstop>
+  <tabstop>sldrB</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>sldrR</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spbxR</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>183</x>
+     <y>39</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>251</x>
+     <y>40</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spbxR</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>sldrR</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>254</x>
+     <y>57</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>194</x>
+     <y>54</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sldrG</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spbxG</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>194</x>
+     <y>84</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>254</x>
+     <y>87</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spbxG</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>sldrG</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>254</x>
+     <y>73</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>194</x>
+     <y>84</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sldrB</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spbxB</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>194</x>
+     <y>97</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>254</x>
+     <y>117</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spbxB</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>sldrB</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>251</x>
+     <y>95</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>194</x>
+     <y>114</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sldrR</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ModeGrayscale</receiver>
+   <slot>adjusted()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>170</x>
+     <y>50</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>268</x>
+     <y>44</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sldrG</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ModeGrayscale</receiver>
+   <slot>adjusted()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>166</x>
+     <y>75</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>137</x>
+     <y>85</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sldrB</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ModeGrayscale</receiver>
+   <slot>adjusted()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>166</x>
+     <y>105</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>137</x>
+     <y>85</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioMean</sender>
+   <signal>clicked()</signal>
+   <receiver>ModeGrayscale</receiver>
+   <slot>adjusted()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>44</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>137</x>
+     <y>85</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioMax</sender>
+   <signal>clicked()</signal>
+   <receiver>ModeGrayscale</receiver>
+   <slot>adjusted()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>68</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>137</x>
+     <y>85</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioMin</sender>
+   <signal>clicked()</signal>
+   <receiver>ModeGrayscale</receiver>
+   <slot>adjusted()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>92</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>137</x>
+     <y>85</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioWeighed</sender>
+   <signal>clicked()</signal>
+   <receiver>ModeGrayscale</receiver>
+   <slot>adjusted()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>116</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>137</x>
+     <y>85</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ModeGrayscale</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>125</x>
+     <y>144</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>143</x>
+     <y>213</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ModeGrayscale</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>244</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>244</x>
+     <y>200</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>adjusted()</slot>
+ </slots>
+ <buttongroups>
+  <buttongroup name="btngrp"/>
+ </buttongroups>
+</ui>
