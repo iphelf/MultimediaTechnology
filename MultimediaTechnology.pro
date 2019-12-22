@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui texttospeech
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -20,7 +20,8 @@ SOURCES += \
     src/bitmap/bitmap.cpp \
     src/bitmap/modegrayscale.cpp \
     src/main.cpp \
-    src/menu/menu.cpp
+    src/menu/menu.cpp \
+    src/tts/tts.cpp
 
 HEADERS += \
     src/bitmap/adjustbc.h \
@@ -28,13 +29,15 @@ HEADERS += \
     src/console.h \
     src/bitmap/bitmap.h \
     src/bitmap/modegrayscale.h \
-    src/menu/menu.h
+    src/menu/menu.h \
+    src/tts/tts.h
 
 FORMS += \
     src/bitmap/adjustbc.ui \
     src/bitmap/bitmap.ui \
     src/bitmap/modegrayscale.ui \
-    src/menu/menu.ui
+    src/menu/menu.ui \
+    src/tts/tts.ui
 
 INCLUDEPATH += D:\Programs\OpenCV\opencv-4.1.2-built-Qt\install\include
 LIBS += D:\Programs\OpenCV\opencv-4.1.2-built-Qt\bin\libopencv_core412.dll
