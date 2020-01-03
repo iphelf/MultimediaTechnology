@@ -16,14 +16,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    src/animate/animate.cpp \
     src/bitmap/adjustbc.cpp \
     src/bitmap/bitmap.cpp \
+    src/bitmap/convertor.cpp \
     src/bitmap/modegrayscale.cpp \
     src/main.cpp \
     src/menu/menu.cpp \
     src/tts/tts.cpp
 
 HEADERS += \
+    src/animate/animate.h \
     src/bitmap/adjustbc.h \
     src/bitmap/convertor.h \
     src/console.h \
@@ -33,6 +36,7 @@ HEADERS += \
     src/tts/tts.h
 
 FORMS += \
+    src/animate/animate.ui \
     src/bitmap/adjustbc.ui \
     src/bitmap/bitmap.ui \
     src/bitmap/modegrayscale.ui \
